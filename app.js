@@ -14,7 +14,7 @@
     nav.classList.toggle('open', open);
     scrim.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.textContent = open ? 'Close ×' : 'Menu ☰';
+    menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   }
   if (menuBtn) menuBtn.addEventListener('click', function () {
     setMenu(!nav.classList.contains('open'));
@@ -50,6 +50,7 @@
   });
 
   let ticking = false;
+  let lastActiveSection = null;
   function paintScroll() {
     const doc = document.documentElement;
     const scrollable = Math.max(1, doc.scrollHeight - window.innerHeight);
@@ -65,6 +66,14 @@
       if (active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    if (current !== lastActiveSection && nav) {
+      const activeLink = navLinks.find(function (link) { return link.getAttribute('href') === '#' + current; });
+      if (activeLink) {
+        const target = activeLink.offsetTop - nav.clientHeight / 2 + activeLink.clientHeight / 2;
+        nav.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+      }
+      lastActiveSection = current;
+    }
     ticking = false;
   }
   window.addEventListener('scroll', function () {
