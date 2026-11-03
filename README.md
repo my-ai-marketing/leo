@@ -1,6 +1,6 @@
-# LEO Developments, Chairman's Growth Strategy
+# LEO Development, Chairman's Growth Strategy
 
-A research-grounded, mobile-friendly executive strategy hub for LEO Developments, VISTAL by Victoria Swarovski, and Rove Home Muscat Central. Prepared as an internal strategic proposal, snapshot **03 November 2026**.
+A research-grounded, mobile-friendly executive strategy hub for LEO Development, VISTAL by Victoria Swarovski, and Rove Home Muscat Central. Prepared as an internal strategic proposal, snapshot **03 November 2026**.
 
 ## Site
 - `index.html`, 19 linked strategy chapters (including requested India, Iran, Russians in Dubai, UAE expatriates and the additional DACH hypothesis).
