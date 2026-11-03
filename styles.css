@@ -178,24 +178,26 @@ body.present .present-exit{display:block}
 }
 .rail-select-wrap{position:relative;flex:none;z-index:6}
 .rail-current{
-  width:100%;min-height:68px;padding:10px;
-  display:grid;grid-template-columns:42px minmax(0,1fr) 13px;
-  align-items:center;gap:10px;text-align:left;
-  color:#f5efe6;background:#151009;
-  border:1px solid rgba(201,154,60,.33);border-radius:15px;
-  box-shadow:0 8px 22px rgba(0,0,0,.18)
+  width:100%;min-height:76px;padding:9px 0 10px;
+  display:grid;grid-template-columns:32px minmax(0,1fr) 16px;
+  align-items:center;gap:15px;text-align:left;
+  color:#f5efe6;background:transparent;
+  border:0;border-radius:0;box-shadow:none;
+  transition:color .18s ease
 }
-.rail-current:hover,.rail-current:focus-visible{border-color:var(--rail-gold)}
+/* An open section heading: no enclosing card or inset number box. */
+.rail-current:hover .rail-current-copy strong{color:var(--rail-gold)}
+.rail-current:focus-visible{outline:2px solid var(--rail-gold);outline-offset:4px;border-radius:3px}
 .rail-current-number{
-  display:grid;place-items:center;width:42px;height:42px;
-  color:var(--rail-gold);border:1px solid rgba(201,154,60,.55);
-  border-radius:11px;font:550 19px/1 var(--display);font-variant-numeric:tabular-nums
+  display:grid;place-items:center;width:32px;height:40px;
+  color:var(--rail-gold);border:0;border-radius:0;
+  font:560 24px/1 var(--display);font-variant-numeric:tabular-nums
 }
 .rail-current-copy{min-width:0;display:grid;gap:5px}
 .rail-current-copy>span{font:700 10px/1.2 var(--body);letter-spacing:.13em;color:#b69b73}
 .rail-current-copy strong{
-  font:700 13.5px/1.35 var(--body);letter-spacing:-.015em;
-  color:#f5efe6;overflow-wrap:break-word
+  font:700 15px/1.35 var(--body);letter-spacing:-.018em;
+  color:#f5efe6;overflow-wrap:break-word;transition:color .18s ease
 }
 .rail-chevron{font-size:18px;line-height:1;color:#cba861;transition:transform .18s}
 .rail-current[aria-expanded="true"] .rail-chevron{transform:rotate(180deg)}
@@ -219,7 +221,7 @@ body.present .present-exit{display:block}
 .rail-index a strong{font-size:12px;font-weight:600;overflow-wrap:anywhere}
 .rail-dots{
   position:relative;display:flex;flex-direction:column;align-items:flex-start;
-  flex:1;min-height:0;margin-top:24px;overflow-y:auto;overflow-x:visible;
+  flex:1;min-height:0;margin-top:13px;overflow-y:auto;overflow-x:visible;
   padding:0 0 6px;scrollbar-width:none;overscroll-behavior:contain
 }
 .rail-dots::-webkit-scrollbar{display:none}
@@ -393,9 +395,9 @@ main .hero .stat-grid .metric-label{font-size:12.5px;line-height:1.55}
 @media(max-width:1050px) and (min-width:761px){
   :root{--rail-width:225px}
   .side.rail-side{padding:19px 12px 17px}
-  .rail-current{grid-template-columns:39px minmax(0,1fr) 12px;gap:7px;padding:8px}
-  .rail-current-number{width:39px;height:39px}
-  .rail-current-copy strong{font-size:12.5px}
+  .rail-current{grid-template-columns:30px minmax(0,1fr) 12px;gap:10px;padding:8px 0}
+  .rail-current-number{width:30px;height:38px;font-size:22px}
+  .rail-current-copy strong{font-size:14px}
   main .hero h1.display{font-size:clamp(44px,5.3vw,64px)}
 }
 @media(max-height:720px) and (min-width:761px){
@@ -416,7 +418,7 @@ main .hero .stat-grid .metric-label{font-size:12.5px;line-height:1.55}
   }
   .side.rail-side.open{transform:translateX(0)}
   .rail-index{max-height:calc(100dvh - 235px)}
-  .rail-dots{margin-top:18px}
+  .rail-dots{margin-top:12px}
   .rail-tip{display:none}
   .rail-footer{padding-top:12px}
   .progress{left:0}
