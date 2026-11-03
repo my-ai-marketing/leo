@@ -156,7 +156,7 @@ body.present .present-exit{display:block}
 }
 
 /* ==============================================================
-   LEO PRESENTATION SYSTEM — one layout layer for all breakpoints
+   LEO PRESENTATION SYSTEM, one layout layer for all breakpoints
    Colors: warm charcoal / gold. Reference: Al Jadeed.
    All generic content component styles remain above this section.
    ============================================================== */
@@ -269,7 +269,7 @@ body.present .app.rail-layout{grid-template-columns:1fr}
 body.present .side.rail-side{display:none}
 body.present .progress{left:0}
 
-/* Content composition — a centered editorial canvas, not a dashboard grid. */
+/* Content composition, a centered editorial canvas, not a dashboard grid. */
 main{min-width:0;max-width:100%;overflow:clip}
 main .section{
   display:block;min-width:0;overflow:visible;

@@ -1,11 +1,11 @@
-# LEO Developments — Chairman's Growth Strategy
+# LEO Developments, Chairman's Growth Strategy
 
 A research-grounded, mobile-friendly executive strategy hub for LEO Developments, VISTAL by Victoria Swarovski, and Rove Home Muscat Central. Prepared as an internal strategic proposal, snapshot **03 November 2026**.
 
 ## Site
-- `index.html` — 19 linked strategy chapters (including requested India, Iran, Russians in Dubai, UAE expatriates and the additional DACH hypothesis).
-- `styles.css` — warm charcoal and gold design system adapted from Al Jadeed, with a single consolidated LEO presentation layout layer, responsive compact chapter rail, centered editorial sections, readable card typography and print styles.
-- `app.js` — current-chapter tracking, chapter dropdown, mobile drawer with scroll lock, progress, reduced-motion-aware dot navigation, presentation mode, print and interactive illustrative funnel scenario.
+- `index.html`, 19 linked strategy chapters (including requested India, Iran, Russians in Dubai, UAE expatriates and the additional DACH hypothesis).
+- `styles.css`, warm charcoal and gold design system adapted from Al Jadeed, with a single consolidated LEO presentation layout layer, responsive compact chapter rail, centered editorial sections, readable card typography and print styles.
+- `app.js`, current-chapter tracking, chapter dropdown, mobile drawer with scroll lock, progress, reduced-motion-aware dot navigation, presentation mode, print and interactive illustrative funnel scenario.
 
 ## Publishing on GitHub Pages
 1. Open **Repository → Settings → Pages**.
