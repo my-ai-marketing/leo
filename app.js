@@ -93,6 +93,14 @@
         if (railNumber) railNumber.textContent = chapter.dataset.number;
         if (railTitle) railTitle.textContent = chapter.dataset.label;
       }
+      const activeDot = dotLinks.find(function (link) {
+        return link.getAttribute('href') === '#' + current;
+      });
+      const dotsContainer = document.querySelector('.rail-dots');
+      if (activeDot && dotsContainer) {
+        const center = activeDot.offsetTop - dotsContainer.clientHeight / 2 + activeDot.clientHeight / 2;
+        dotsContainer.scrollTo({ top: Math.max(0, center), behavior: 'smooth' });
+      }
       lastActiveSection = current;
     }
     ticking = false;
