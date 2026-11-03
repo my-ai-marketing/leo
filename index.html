@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Roboto+Flex:opsz,wdth,wght@8..144,75..150,300..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261103-sidebar-gold-4">
-<script defer src="app.js?v=20261103-gold-clean-3"></script>
+<link rel="stylesheet" href="styles.css?v=20261103-rail-2">
+<script defer src="app.js?v=20261103-rail-2"></script>
 </head>
 <body>
 <a href="#executive" class="skip">Skip to strategy</a>
@@ -19,35 +19,61 @@
 <div class="menu-scrim" id="menuScrim"></div>
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 <button type="button" id="exitPresent" class="btn present-exit">Exit presentation ×</button>
-<div class="app">
-<aside class="side" id="sideNav">
-  <a class="brand" href="#executive"><div class="mark">LEO</div><div><h1>LEO Developments</h1><p>Chairman's growth strategy</p></div></a>
-  <div class="side-sub">Internal marketing initiative</div>
-  <nav class="nav" aria-label="Strategy navigation">
-    <a href="#executive">01 / Executive direction</a>
-    <a href="#mandate">02 / Mandate & buyer gap</a>
-    <a href="#architecture">03 / Brand architecture</a>
-    <a href="#vistal">04 / VISTAL growth thesis</a>
-    <a href="#rove">05 / Rove Home growth thesis</a>
-    <a href="#india">06 / Indian buyers</a>
-    <a href="#iran">07 / Iranian buyers</a>
-    <a href="#russia">08 / Russians in Dubai</a>
-    <a href="#uae">09 / UAE expatriates</a>
-    <a href="#dach">10 / German-speaking Europe</a>
-    <a href="#visibility">11 / LEO visibility engine</a>
-    <a href="#alliances">12 / Partnerships & data</a>
-    <a href="#events">13 / In-house events</a>
-    <a href="#conversion">14 / Sales conversion system</a>
-    <a href="#campaigns">15 / Agency vs internal team</a>
-    <a href="#planner">16 / Commercial pilot planner</a>
-    <a href="#roadmap">17 / 90-day activation</a>
-    <a href="#governance">18 / KPIs, risks & decisions</a>
-    <a href="#sources">19 / Evidence & sources</a>
+<div class="app rail-layout">
+<aside id="sideNav" class="side rail-side" aria-label="Strategy navigation">
+ <div id="railSelectWrap" class="rail-select-wrap">
+  <button type="button" id="railCurrentButton" class="rail-current" aria-controls="railIndex" aria-expanded="false">
+   <span id="railCurrentNumber" class="rail-current-number">01</span>
+   <span class="rail-current-copy"><span>CURRENT SECTION</span><strong id="railCurrentTitle">Executive direction</strong></span>
+   <span class="rail-chevron" aria-hidden="true">⌄</span>
+  </button>
+  <nav id="railIndex" class="rail-index" aria-label="All strategy sections">
+   <a href="#executive" data-number="01" data-label="Executive direction"><span>01</span><strong>Executive direction</strong></a>
+   <a href="#mandate" data-number="02" data-label="Mandate &amp; buyer gap"><span>02</span><strong>Mandate &amp; buyer gap</strong></a>
+   <a href="#architecture" data-number="03" data-label="Brand architecture"><span>03</span><strong>Brand architecture</strong></a>
+   <a href="#vistal" data-number="04" data-label="VISTAL growth thesis"><span>04</span><strong>VISTAL growth thesis</strong></a>
+   <a href="#rove" data-number="05" data-label="Rove Home growth thesis"><span>05</span><strong>Rove Home growth thesis</strong></a>
+   <a href="#india" data-number="06" data-label="Indian buyers"><span>06</span><strong>Indian buyers</strong></a>
+   <a href="#iran" data-number="07" data-label="Iranian buyers"><span>07</span><strong>Iranian buyers</strong></a>
+   <a href="#russia" data-number="08" data-label="Russians in Dubai"><span>08</span><strong>Russians in Dubai</strong></a>
+   <a href="#uae" data-number="09" data-label="UAE expatriates"><span>09</span><strong>UAE expatriates</strong></a>
+   <a href="#dach" data-number="10" data-label="German-speaking Europe"><span>10</span><strong>German-speaking Europe</strong></a>
+   <a href="#visibility" data-number="11" data-label="LEO visibility engine"><span>11</span><strong>LEO visibility engine</strong></a>
+   <a href="#alliances" data-number="12" data-label="Partnerships &amp; data"><span>12</span><strong>Partnerships &amp; data</strong></a>
+   <a href="#events" data-number="13" data-label="In-house events"><span>13</span><strong>In-house events</strong></a>
+   <a href="#conversion" data-number="14" data-label="Sales conversion system"><span>14</span><strong>Sales conversion system</strong></a>
+   <a href="#campaigns" data-number="15" data-label="Agency vs internal team"><span>15</span><strong>Agency vs internal team</strong></a>
+   <a href="#planner" data-number="16" data-label="Commercial pilot planner"><span>16</span><strong>Commercial pilot planner</strong></a>
+   <a href="#roadmap" data-number="17" data-label="90-day activation"><span>17</span><strong>90-day activation</strong></a>
+   <a href="#governance" data-number="18" data-label="KPIs, risks &amp; decisions"><span>18</span><strong>KPIs, risks &amp; decisions</strong></a>
+   <a href="#sources" data-number="19" data-label="Evidence &amp; sources"><span>19</span><strong>Evidence &amp; sources</strong></a>
   </nav>
-  <div class="side-foot">
-    <div class="side-actions"><button type="button" class="btn presentBtn">Present</button><button type="button" class="btn printBtn">Export PDF</button></div>
-    <div class="side-note">Prepared for Chairman Victor<br>LEO marketing strategy · November 2026</div>
-  </div>
+ </div>
+ <nav class="rail-dots" aria-label="Quick section navigation">
+  <a href="#executive" aria-label="01: Executive direction" title="Executive direction"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Executive direction</span></a>
+  <a href="#mandate" aria-label="02: Mandate &amp; buyer gap" title="Mandate &amp; buyer gap"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Mandate &amp; buyer gap</span></a>
+  <a href="#architecture" aria-label="03: Brand architecture" title="Brand architecture"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Brand architecture</span></a>
+  <a href="#vistal" aria-label="04: VISTAL growth thesis" title="VISTAL growth thesis"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">VISTAL growth thesis</span></a>
+  <a href="#rove" aria-label="05: Rove Home growth thesis" title="Rove Home growth thesis"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Rove Home growth thesis</span></a>
+  <a href="#india" aria-label="06: Indian buyers" title="Indian buyers"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Indian buyers</span></a>
+  <a href="#iran" aria-label="07: Iranian buyers" title="Iranian buyers"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Iranian buyers</span></a>
+  <a href="#russia" aria-label="08: Russians in Dubai" title="Russians in Dubai"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Russians in Dubai</span></a>
+  <a href="#uae" aria-label="09: UAE expatriates" title="UAE expatriates"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">UAE expatriates</span></a>
+  <a href="#dach" aria-label="10: German-speaking Europe" title="German-speaking Europe"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">German-speaking Europe</span></a>
+  <a href="#visibility" aria-label="11: LEO visibility engine" title="LEO visibility engine"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">LEO visibility engine</span></a>
+  <a href="#alliances" aria-label="12: Partnerships &amp; data" title="Partnerships &amp; data"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Partnerships &amp; data</span></a>
+  <a href="#events" aria-label="13: In-house events" title="In-house events"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">In-house events</span></a>
+  <a href="#conversion" aria-label="14: Sales conversion system" title="Sales conversion system"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Sales conversion system</span></a>
+  <a href="#campaigns" aria-label="15: Agency vs internal team" title="Agency vs internal team"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Agency vs internal team</span></a>
+  <a href="#planner" aria-label="16: Commercial pilot planner" title="Commercial pilot planner"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Commercial pilot planner</span></a>
+  <a href="#roadmap" aria-label="17: 90-day activation" title="90-day activation"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">90-day activation</span></a>
+  <a href="#governance" aria-label="18: KPIs, risks &amp; decisions" title="KPIs, risks &amp; decisions"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">KPIs, risks &amp; decisions</span></a>
+  <a href="#sources" aria-label="19: Evidence &amp; sources" title="Evidence &amp; sources"><span class="rail-dot"></span><span class="rail-tip" aria-hidden="true">Evidence &amp; sources</span></a>
+ </nav>
+ <div class="rail-footer">
+  <div class="rail-actions"><button type="button" class="btn presentBtn">Present</button><button type="button" class="btn printBtn">Export PDF</button></div>
+  <div class="rail-foot-note">LEO DEVELOPMENTS · CHAIRMAN'S STRATEGY</div>
+ </div>
 </aside>
 <main id="main">
 <section class="section hero" id="executive">
