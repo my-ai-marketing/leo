@@ -4,8 +4,8 @@ A research-grounded, mobile-friendly executive strategy hub for LEO Developments
 
 ## Site
 - `index.html` — 19 linked strategy chapters (including requested India, Iran, Russians in Dubai, UAE expatriates and the additional DACH hypothesis).
-- `styles.css` — dark navy/violet design system based on the visual direction of the feasibility-study reference, including Roboto Flex and Manrope, desktop sidebar, mobile menu and print layout.
-- `app.js` — navigation state, progress, presentation mode, print and interactive illustrative funnel scenario.
+- `styles.css` — warm charcoal and gold design system adapted from Al Jadeed, with a single consolidated LEO presentation layout layer, responsive compact chapter rail, centered editorial sections, readable card typography and print styles.
+- `app.js` — current-chapter tracking, chapter dropdown, mobile drawer with scroll lock, progress, reduced-motion-aware dot navigation, presentation mode, print and interactive illustrative funnel scenario.
 
 ## Publishing on GitHub Pages
 1. Open **Repository → Settings → Pages**.
@@ -25,3 +25,9 @@ GitHub Pages settings and publication must be verified in the repository's GitHu
 
 ## Next updates
 Replace team-reported commercial baseline with verified CRM aggregates, add approved current pricing/inventory, attach owner and deadlines to each initiative, and update source dates at every management review.
+
+## Design maintenance
+- Keep the 19 strategy sections, calculator and presentation controls intact when changing layouts.
+- Update the consolidated `LEO PRESENTATION SYSTEM` portion of `styles.css` instead of appending competing overrides.
+- Test at 390px, 768px, 1024px and desktop widths; confirm rail navigation, wrapping, tables, calculator, print and focus states.
+- Publish related CSS, JavaScript and cache-version changes together in one commit to avoid successive superseded Pages deployments.

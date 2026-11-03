@@ -33,7 +33,8 @@
     scrim.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
     menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    if (window.innerWidth <= 760) setIndexOpen(open);
+    document.body.classList.toggle('menu-open', open && window.innerWidth <= 760);
+    if (window.innerWidth <= 760) setIndexOpen(false);
   }
   if (menuBtn) menuBtn.addEventListener('click', function () {
     setMenu(!nav.classList.contains('open'));
@@ -99,7 +100,8 @@
       const dotsContainer = document.querySelector('.rail-dots');
       if (activeDot && dotsContainer) {
         const center = activeDot.offsetTop - dotsContainer.clientHeight / 2 + activeDot.clientHeight / 2;
-        dotsContainer.scrollTo({ top: Math.max(0, center), behavior: 'smooth' });
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        dotsContainer.scrollTo({ top: Math.max(0, center), behavior: reduceMotion ? 'auto' : 'smooth' });
       }
       lastActiveSection = current;
     }
@@ -111,7 +113,10 @@
       window.requestAnimationFrame(paintScroll);
     }
   }, { passive: true });
-  window.addEventListener('resize', paintScroll);
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 760 && nav && nav.classList.contains('open')) setMenu(false);
+    paintScroll();
+  });
   paintScroll();
 
   const fields = ['leads', 'qual', 'meet', 'attend', 'book'];
