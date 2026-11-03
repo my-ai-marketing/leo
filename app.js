@@ -7,7 +7,25 @@
   const progress = $('#progressBar');
   const exitPresent = $('#exitPresent');
   const sections = Array.from(document.querySelectorAll('main section[id]'));
-  const navLinks = Array.from(document.querySelectorAll('.nav a'));
+  const navLinks = Array.from(document.querySelectorAll('.rail-index a'));
+  const dotLinks = Array.from(document.querySelectorAll('.rail-dots a'));
+  const allLinks = navLinks.concat(dotLinks);
+  const railButton = $('#railCurrentButton');
+  const railIndex = $('#railIndex');
+  const railNumber = $('#railCurrentNumber');
+  const railTitle = $('#railCurrentTitle');
+  function setIndexOpen(open) {
+    if (!railIndex || !railButton) return;
+    railIndex.classList.toggle('open', open);
+    railButton.setAttribute('aria-expanded', String(open));
+  }
+  if (railButton) railButton.addEventListener('click', function () {
+    setIndexOpen(!railIndex.classList.contains('open'));
+  });
+  document.addEventListener('pointerdown', function (event) {
+    if (railIndex && railIndex.classList.contains('open') && !event.target.closest('#railSelectWrap'))
+      setIndexOpen(false);
+  });
 
   function setMenu(open) {
     if (!nav || !menuBtn || !scrim) return;
@@ -15,18 +33,20 @@
     scrim.classList.toggle('open', open);
     menuBtn.setAttribute('aria-expanded', String(open));
     menuBtn.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    if (window.innerWidth <= 760) setIndexOpen(open);
   }
   if (menuBtn) menuBtn.addEventListener('click', function () {
     setMenu(!nav.classList.contains('open'));
   });
   if (scrim) scrim.addEventListener('click', function () { setMenu(false); });
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function () { setMenu(false); });
+  allLinks.forEach(function (link) {
+    link.addEventListener('click', function () { setIndexOpen(false); setMenu(false); });
   });
 
   function setPresentation(open) {
     document.body.classList.toggle('present', open);
     setMenu(false);
+    setIndexOpen(false);
     document.querySelectorAll('.presentBtn').forEach(function (button) {
       button.textContent = open ? 'Exit presentation' : 'Present';
     });
@@ -44,6 +64,7 @@
 
   document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
+      setIndexOpen(false);
       setMenu(false);
       if (document.body.classList.contains('present')) setPresentation(false);
     }
@@ -60,17 +81,17 @@
     sections.forEach(function (section) {
       if (section.offsetTop <= edge) current = section.id;
     });
-    navLinks.forEach(function (link) {
+    allLinks.forEach(function (link) {
       const active = link.getAttribute('href') === '#' + current;
       link.classList.toggle('active', active);
       if (active) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
-    if (current !== lastActiveSection && nav) {
-      const activeLink = navLinks.find(function (link) { return link.getAttribute('href') === '#' + current; });
-      if (activeLink) {
-        const target = activeLink.offsetTop - nav.clientHeight / 2 + activeLink.clientHeight / 2;
-        nav.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+    if (current !== lastActiveSection) {
+      const chapter = navLinks.find(function (link) { return link.getAttribute('href') === '#' + current; });
+      if (chapter) {
+        if (railNumber) railNumber.textContent = chapter.dataset.number;
+        if (railTitle) railTitle.textContent = chapter.dataset.label;
       }
       lastActiveSection = current;
     }
