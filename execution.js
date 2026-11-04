@@ -20,7 +20,7 @@ function render(id,html,oldVisible){
  inner.innerHTML=html+((oldVisible||id==='planner')?'':'<details class="exec-more"><summary>Open earlier strategy rationale and supporting notes</summary><div class="legacy">'+previous+'</div></details>');
 }
 var platforms=[
- ['Meta — Facebook / Instagram','4,850','Demand generation, lead forms and landing-page conversion'],
+ ['Meta (Facebook / Instagram)','4,850','Demand generation, lead forms and landing-page conversion'],
  ['Google Search','3,200','High-intent project, ownership and Muscat property searches'],
  ['YouTube video','1,200','Remarketing and proof-led consideration'],
  ['LinkedIn','850','Selective business-owner and professional audiences'],
@@ -112,7 +112,7 @@ function boot(){
  outdoor:['Use mall or retail digital screens and approved co-branded displays from the shared OMR 3,500 monthly OOH budget. Do not assume roadside billboard inventory at these rates.','Use brokers for Dubai preview material; do not imply access to hotel guest databases.','One cross-border broker briefing each month from existing partnerships/events budget.'],
  phase:['Obtain approved unit/price/inventory information, furnished specification and FAQs.','Launch dual landing pages; recruit 6 qualified UAE/Muscat broker partners; review CPQL by motive.','Prioritize partner and Search-origin opportunities entering proposal or booking stages.']});
  markets.forEach(marketPage);
- render('visibility',h('11','LEO visibility: <span class="accent">OMR 3,500 outdoor.</span>','Brand media is a measured support system, not a substitute for sales-qualified demand.','Use LEO proof, project credentials and verified delivery information, with a single tracked path to project sales.')+
+ render('visibility',h('11','LEO outdoor plan: <span class="accent">OMR 3,500/month.</span>','Brand media is a measured support system, not a substitute for sales-qualified demand.','Use LEO proof, project credentials and verified delivery information, with a single tracked path to project sales.')+
  kpis([['Muscat outdoor',money(3500)+'/mo','Two mall screens + two vehicle placements (illustrative)'],['Paid video within pool',money(1200)+'/mo','YouTube; already inside paid media'],['Earned/partner activity','4 pitches / mo','Internal action target'],['Attribution','100% QR/UTM','Unique source code by placement']])+
  table(['Outdoor format','Illustrative monthly cap','Required measurement'],[['Mall digital screen / network A',money(1500),'Unique short URL, tagged QR; quoted media-owner inventory'],['Mall digital screen / network B',money(1200),'Location-specific landing page and QR'],['Two vehicle / taxi placements',money(800),'Two unique source codes, approved placement and consent'],['TOTAL',money(3500),'All figures conditional on written Oman quotes, permits and production costs']])+
  '<div class="exec-grid">'+panel('What the internal team actually does',list(['Film 2 leadership/project-proof reels per month and issue 4 targeted media pitches.','Secure 2 project-specific co-marketing partners per month; get contractual and brand approval.','Track branded search interest and QR-sourced consultations; do not equate QR scans with all outdoor-driven demand.']))+
