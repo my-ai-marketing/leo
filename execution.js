@@ -17,7 +17,7 @@ function render(id,html,oldVisible){
  var sec=document.getElementById(id); if(!sec)return;
  var inner=sec.querySelector('.section-inner');if(!inner)return;
  var previous=inner.innerHTML;
- inner.innerHTML=html+(oldVisible?'':'<details class="exec-more"><summary>Open earlier strategy rationale and supporting notes</summary><div class="legacy">'+previous+'</div></details>');
+ inner.innerHTML=html+((oldVisible||id==='planner')?'':'<details class="exec-more"><summary>Open earlier strategy rationale and supporting notes</summary><div class="legacy">'+previous+'</div></details>');
 }
 var platforms=[
  ['Meta — Facebook / Instagram','4,850','Demand generation, lead forms and landing-page conversion'],
@@ -154,9 +154,10 @@ function boot(){
   var si=sources.querySelector('.section-inner');
   var newSources='<div class="exec-panel" style="margin:22px 0"><div class="exec-label">New pricing and CRM references • external planning checks, 04 Nov 2026</div>'+
   list(['<a class="exec-link" target="_blank" rel="noopener" href="https://outdooradvertisinguae.com/outdoor-ooh-advertising-muscat-oman/">Muscat OOH indicative placement prices</a>: published roadside billboard estimates exceed this pilot budget. Mall digital and vehicle formats are more plausible, but written media-owner quotations are required.',
-  '<a class="exec-link" target="_blank" rel="noopener" href="https://madaralbader.com/guides/social-media-ads-cost-oman">Oman digital ad price and Google CPC guide (13 Oct 2026)</a>: search estimates are indicative, not LEO lead-cost evidence.',
+  '<a class="exec-link" target="_blank" rel="noopener" href="https://madaralbader.com/guides/social-media-ads-cost-oman">Oman digital ad price and Google CPC guide (13 Oct 2026)</a>: general Oman search-price estimates are not evidence of luxury-property lead costs or CPQL.',
   '<a class="exec-link" target="_blank" rel="noopener" href="https://helpdesk.bitrix24.com/open/22869430/">Bitrix24: Google/Facebook UTM and cost attribution (Oct 2026)</a>.',
   '<a class="exec-link" target="_blank" rel="noopener" href="https://helpdesk.bitrix24.com/open/21498798">Bitrix24: connect sources and UTM-tagged CRM leads (Oct 2026)</a>.',
+  '<a class="exec-link" target="_blank" rel="noopener" href="https://helpdesk.bitrix24.com/open/20838876/">Bitrix24: Facebook Lead Ads integration (updated Oct 2026)</a>: create Meta Instant Forms before connecting them to Bitrix24.',
   'All paid CPL, qualification rates, reservations, payroll rates and lead targets on this page are internal test assumptions, not external market facts.'])+'</div>';
   si.insertAdjacentHTML('beforeend',newSources);
   var fine=si.querySelector('.fine');if(fine)fine.textContent='Research snapshot: 04 November 2026. Third-party rate cards vary by geography, inventory and inventory timing. Media contracts, legal/brand permissions, pricing, ownership eligibility and data-processing terms require separate written approval.';
