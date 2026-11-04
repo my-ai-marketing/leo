@@ -1,0 +1,60 @@
+/* Quantified commercial execution layer, 04 Nov 2026. Uses established gold design tokens. */
+.exec-tag{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(242,207,122,.24);border-radius:99px;font-size:10px;font-weight:800;letter-spacing:.09em;color:var(--accent2);text-transform:uppercase;margin-bottom:19px;background:rgba(201,154,60,.045)}
+.exec-lede{font-size:clamp(14px,1.42vw,18px);line-height:1.55;color:#c5b398;max-width:850px;margin:16px 0 0}
+.exec-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:28px 0}
+.exec-kpi{border:1px solid rgba(242,207,122,.21);background:linear-gradient(145deg,rgba(201,154,60,.11),rgba(17,13,9,.7));border-radius:15px;padding:18px;min-width:0}
+.exec-kpi small{display:block;color:#ad9c82;font-size:10px;line-height:1.4;text-transform:uppercase;letter-spacing:.065em}
+.exec-kpi strong{display:block;color:#f2cf7a;font:570 clamp(26px,2.7vw,40px)/1.15 var(--display);font-stretch:120%;margin:7px 0 6px;overflow-wrap:anywhere}
+.exec-kpi span{font-size:11px;color:#c1b095;line-height:1.45;display:block}
+.exec-sub{font-family:var(--display);font-size:clamp(22px,2.1vw,29px);font-weight:600;letter-spacing:-.018em;margin:28px 0 14px;color:#e9dfd0}
+.exec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:18px 0}
+.exec-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.exec-panel{background:rgba(29,22,13,.8);border:1px solid var(--line);border-radius:15px;padding:19px;min-width:0}
+.exec-panel h3{font-size:15px;font-weight:750;margin:0 0 12px;line-height:1.35}
+.exec-panel p{margin:8px 0 0;color:#b5a28b;font-size:12px;line-height:1.6}
+.exec-list{list-style:none;padding:0;margin:0;display:grid;gap:11px}
+.exec-list li{border-top:1px solid rgba(255,255,255,.065);padding-top:10px;font-size:12px;line-height:1.5;color:#bfae95}
+.exec-list li:first-child{border-top:0;padding-top:0}
+.exec-list b,.exec-panel b{color:#f2e6d4;font-weight:730}
+.exec-label{display:block;color:var(--accent2);text-transform:uppercase;letter-spacing:.08em;font-size:10px;font-weight:800;margin:4px 0 12px}
+.exec-tbl{overflow-x:auto;margin:18px 0 25px;border:1px solid var(--line);border-radius:14px;background:rgba(17,13,9,.65)}
+.exec-tbl table{width:100%;border-collapse:collapse;min-width:620px}
+.exec-tbl th{font-size:10px;line-height:1.4;font-weight:750;text-align:left;text-transform:uppercase;letter-spacing:.055em;color:#ebca86;background:rgba(201,154,60,.09);padding:13px 15px;white-space:nowrap}
+.exec-tbl td{font-size:12px;line-height:1.5;color:#cbbb9e;padding:12px 15px;border-top:1px solid rgba(242,207,122,.085);vertical-align:top}
+.exec-tbl td:first-child{color:#f1e2c8;font-weight:700}
+.exec-tbl tr:last-child{background:rgba(201,154,60,.04)}
+.exec-tbl .total-row td{font-weight:800;color:#f3d393;background:rgba(201,154,60,.105)}
+.exec-note{border-left:2px solid #c99a3c;background:rgba(201,154,60,.055);padding:13px 16px;color:#baa990;font-size:12px;line-height:1.65;margin:22px 0;border-radius:0 10px 10px 0}
+.exec-note strong{color:#ecd5a9}
+.exec-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(242,207,122,.09);font-size:12px;color:#c5b298}
+.exec-row:last-child{border-bottom:0}
+.exec-row strong{font-size:13px;color:#f1dcac;text-align:right}
+.exec-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:22px 0}
+.exec-step{border:1px solid rgba(242,207,122,.17);border-radius:12px;padding:13px 10px;background:rgba(201,154,60,.045);min-width:0}
+.exec-step em{display:block;font-style:normal;color:var(--accent2);font-size:10px;margin-bottom:8px;font-weight:800}
+.exec-step strong{font-size:12px;line-height:1.35;color:#efe0c5}
+.exec-step p{font-size:10px;color:#ab9a80;margin:6px 0 0;line-height:1.45}
+.exec-target{font-size:12px;color:#c9b698;line-height:1.6;margin:16px 0}
+.exec-target b{color:#f2cf7a}
+.exec-more{margin-top:24px;border:1px solid rgba(242,207,122,.15);border-radius:12px;background:rgba(201,154,60,.027);padding:14px 17px}
+.exec-more summary{font-size:11px;color:#d7bc86;font-weight:800;letter-spacing:.025em;cursor:pointer}
+.exec-more .legacy{margin-top:20px}
+.exec-more .legacy .section-label,.exec-more .legacy .display,.exec-more .legacy .lede{display:none}
+.exec-more .legacy .grid,.exec-more .legacy .table-wrap{margin-top:16px}
+.exec-link{color:#e6bd78;text-decoration:underline;text-underline-offset:3px}
+.exec-toggle{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:13px 0}
+.exec-field{padding:15px 17px;border:1px solid var(--line);border-radius:13px;background:rgba(23,17,10,.86)}
+.exec-field label{display:flex;gap:12px;justify-content:space-between;font-size:12px;color:#e6d5bb;margin-bottom:11px}
+.exec-field label output{font-weight:800;color:var(--accent2)}
+.exec-field input[type=range]{display:block;width:100%;accent-color:#c99a3c}
+.exec-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:22px 0}
+.exec-pill{font-size:10px;color:#bcaa8c;text-transform:uppercase;letter-spacing:.08em;margin-top:10px}
+.exec-hero .exec-kpis{max-width:1020px;margin:30px auto}
+.exec-hero .exec-intro{text-align:center;max-width:890px;margin:0 auto;font-size:13px;color:#bea989;line-height:1.6}
+.exec-hero .exec-call{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.exec-hero .exec-call a{font-size:11px;border:1px solid rgba(242,207,122,.32);background:rgba(201,154,60,.08);color:#f3d393;padding:11px 17px;border-radius:99px;text-decoration:none}
+.exec-hero .exec-call a:hover{background:rgba(201,154,60,.22)}
+@media(max-width:1100px){.exec-grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}.exec-steps{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.exec-kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.exec-grid,.exec-grid.three{grid-template-columns:1fr}.exec-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.exec-panel{padding:17px}.exec-kpi{padding:14px}.exec-kpi strong{font-size:clamp(24px,6vw,33px)}.exec-results{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:430px){.exec-kpi strong{font-size:25px}.exec-kpi span{font-size:10px}.exec-step{padding:11px 9px}.exec-steps{gap:7px}}
+@media print{.exec-tbl{overflow:visible}.exec-tbl table{min-width:0}.exec-grid{break-inside:avoid}.exec-more{display:none}.exec-field input{display:none}.exec-kpi,.exec-panel{break-inside:avoid}}
